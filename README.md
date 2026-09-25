@@ -6,9 +6,9 @@ A beginner-level machine learning project for predicting severe fluoropyrimidine
 
 Fluoropyrimidines such as 5-fluorouracil (5-FU) can cause severe toxicity in some patients.
 
-The DPYD gene is involved in the metabolism of fluoropyrimidines, and some genetic variants may be associated with an increased risk of toxicity.
+The DPYD gene plays an important role in fluoropyrimidine metabolism, and some genetic variants have been associated with an increased risk of toxicity.
 
-In this project, machine learning models are used to explore whether clinical and genetic features can help predict severe fluoropyrimidine toxicity.
+In this project, machine learning methods are used to explore whether clinical and genetic features can help predict severe fluoropyrimidine toxicity.
 
 ## Dataset
 
@@ -19,29 +19,40 @@ The target variable is:
 - `1` = Grade 3, 4 or 5 toxicity event
 - `0` = No grade 3, 4 or 5 toxicity event
 
-The project also includes genetic features related to DPYD and other pharmacogenomic markers.
+The project includes genetic features related to DPYD and other pharmacogenomic markers, together with selected clinical features.
 
 ## Machine Learning
 
 The project includes:
 
 - Data loading and preprocessing
+- Feature selection and feature engineering
 - Target variable creation
-- Feature selection
 - Train/test split
 - Logistic Regression
+- Random Forest
+- Gradient Boosting
 - Handling class imbalance
-- Model prediction
+- Cross-validation
+- Model evaluation
 - Classification report
 - Confusion matrix
-- ROC-AUC evaluation
+- ROC-AUC
+- Precision-Recall analysis
+- Statistical analysis
+- SHAP-based feature interpretation
 
-The main libraries used are:
+## Technologies
 
 - Python
 - pandas
+- NumPy
 - scikit-learn
+- statsmodels
+- SHAP
 - openpyxl
+- matplotlib
+- seaborn
 
 ## Project Structure
 
@@ -80,11 +91,19 @@ Run the project:
 python main.py
 ```
 
+## Data Availability
+
+The original dataset is not included in this repository.
+
+The dataset is excluded from version control to avoid publicly sharing the original patient-level data.
+
 ## Current Status
 
-This is a learning and portfolio project focused on applying machine learning concepts to pharmacogenomics data.
+This is a learning and portfolio project focused on applying machine learning methods to pharmacogenomics data.
 
-The current version is an initial implementation and is not intended for clinical decision-making.
+The current version is an initial implementation and has not been externally validated.
+
+The model outputs should not be used for clinical decision-making.
 
 ## Future Improvements
 
@@ -92,10 +111,11 @@ Possible future improvements include:
 
 - Testing additional machine learning models
 - More detailed feature engineering
-- Cross-validation
+- Larger pharmacogenomic datasets
+- External validation
 - Hyperparameter tuning
-- Better evaluation of model performance
-- Working with larger pharmacogenomic datasets
+- More robust cross-validation
+- Improved model interpretation
 
 ## Author
 
